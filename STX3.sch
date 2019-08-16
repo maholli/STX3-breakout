@@ -1,0 +1,161 @@
+EESchema Schematic File Version 4
+LIBS:STX3-cache
+EELAYER 30 0
+EELAYER END
+$Descr USLetter 11000 8500
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev "1"
+Comp ""
+Comment1 "Design for JLCPCB 1-2 Layer Service"
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L symbols:STX3 U2
+U 1 1 5D56A7EF
+P 5050 3650
+F 0 "U2" H 5050 4265 50  0000 C CNN
+F 1 "STX3" H 5050 4174 50  0000 C CNN
+F 2 "custom-footprints:STX3" H 5100 3150 50  0001 C CNN
+F 3 "" H 5850 4100 50  0001 C CNN
+	1    5050 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0101
+U 1 1 5D56EC84
+P 4300 4000
+F 0 "#PWR0101" H 4300 3750 50  0001 C CNN
+F 1 "GND" H 4305 3827 50  0000 C CNN
+F 2 "" H 4300 4000 50  0001 C CNN
+F 3 "" H 4300 4000 50  0001 C CNN
+	1    4300 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR0102
+U 1 1 5D56FC2D
+P 4200 3150
+F 0 "#PWR0102" H 4200 3000 50  0001 C CNN
+F 1 "+3V3" H 4215 3323 50  0000 C CNN
+F 2 "" H 4200 3150 50  0001 C CNN
+F 3 "" H 4200 3150 50  0001 C CNN
+	1    4200 3150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4200 3150 4200 3300
+Wire Wire Line
+	4200 3400 4300 3400
+Wire Wire Line
+	4300 3300 4200 3300
+Connection ~ 4200 3300
+Wire Wire Line
+	4200 3300 4200 3400
+Connection ~ 5100 1350
+Wire Wire Line
+	4500 1350 5100 1350
+Wire Wire Line
+	4500 1650 4500 1350
+$Comp
+L power:+3V3 #PWR0103
+U 1 1 5D56F62D
+P 5100 1350
+F 0 "#PWR0103" H 5100 1200 50  0001 C CNN
+F 1 "+3V3" H 5115 1523 50  0000 C CNN
+F 2 "" H 5100 1350 50  0001 C CNN
+F 3 "" H 5100 1350 50  0001 C CNN
+	1    5100 1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0104
+U 1 1 5D56E7A6
+P 5700 2350
+F 0 "#PWR0104" H 5700 2100 50  0001 C CNN
+F 1 "GND" H 5705 2177 50  0000 C CNN
+F 2 "" H 5700 2350 50  0001 C CNN
+F 3 "" H 5700 2350 50  0001 C CNN
+	1    5700 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L symbols:RFM98PW U1
+U 1 1 5D56B844
+P 5000 1950
+F 0 "U1" H 5100 1370 59  0000 C CNN
+F 1 "RFM98PW" H 5100 1500 50  0001 C CNN
+F 2 "custom-footprints:RFM98PW_castle" H 5100 1400 50  0001 C CNN
+F 3 "" H 5000 1950 50  0001 C CNN
+	1    5000 1950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4300 3500 4050 3500
+Wire Wire Line
+	4050 3500 4050 1750
+Wire Wire Line
+	4050 1750 4500 1750
+Wire Wire Line
+	4300 3700 3850 3700
+Wire Wire Line
+	4300 3800 3750 3800
+Wire Wire Line
+	3750 3800 3750 1950
+Wire Wire Line
+	3650 3900 4300 3900
+Text Label 4050 3500 0    50   ~ 0
+RESET
+Text Label 4050 3700 0    50   ~ 0
+CTS
+Text Label 4050 3800 0    50   ~ 0
+RX
+Text Label 4050 3900 0    50   ~ 0
+TX
+Text Label 5800 3850 0    50   ~ 0
+ANT
+Wire Wire Line
+	5800 3700 5850 3700
+Text GLabel 5850 3700 2    50   Input ~ 0
+PGE
+Wire Wire Line
+	4500 2350 4450 2350
+Text GLabel 4450 2350 0    50   Input ~ 0
+PGE
+Wire Wire Line
+	3750 1950 4500 1950
+Wire Wire Line
+	4500 2050 3650 2050
+Wire Wire Line
+	3650 2050 3650 3900
+Wire Wire Line
+	3850 1850 4500 1850
+Wire Wire Line
+	3850 1850 3850 3700
+Wire Wire Line
+	4300 3600 4250 3600
+Text GLabel 4250 3600 0    50   Input ~ 0
+RTS
+Wire Wire Line
+	4500 2250 4450 2250
+Text GLabel 4450 2250 0    50   Input ~ 0
+RTS
+NoConn ~ 5800 3500
+NoConn ~ 5800 3600
+NoConn ~ 5700 1750
+NoConn ~ 5700 1850
+NoConn ~ 5700 1950
+NoConn ~ 5700 2050
+NoConn ~ 4500 2150
+NoConn ~ 5800 3300
+Wire Wire Line
+	6100 1650 5700 1650
+Wire Wire Line
+	6100 3850 6100 1650
+Wire Wire Line
+	5800 3850 6100 3850
+$EndSCHEMATC
